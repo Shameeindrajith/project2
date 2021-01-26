@@ -10,11 +10,4 @@
 
 @endsection
 
-@section('css')
-    <style>
-        #adminbtn {
-            background-color: #B1E1EF !important;
-        }
 
-    </style>
-@endsection

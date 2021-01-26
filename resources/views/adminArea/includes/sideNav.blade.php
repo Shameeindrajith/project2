@@ -12,9 +12,9 @@
                 <!-- Nav items -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a id="adminbtn" class="nav-link" href="{{ url('admin') }}">
+                        <a id="adminbtn" class="nav-link" href="{{ route('admin-show-user') }}">
                             <i class="ni ni-tv-2 text-primary"></i>
-                            <span class="nav-link-text">Admin-Dashboard</span>
+                            <span class="nav-link-text">User</span>
                         </a>
                     </li>
                     <li class="nav-item">

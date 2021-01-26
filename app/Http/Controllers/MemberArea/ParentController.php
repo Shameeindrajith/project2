@@ -5,7 +5,7 @@ namespace App\Http\Controllers\MemberArea;
 use App\Http\Controllers\Controller;
 
 
-class ParentControllar extends Controller
+class ParentController extends Controller
 {
 
      public function __construct()

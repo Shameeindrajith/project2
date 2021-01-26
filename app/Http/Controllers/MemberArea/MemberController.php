@@ -4,7 +4,7 @@ namespace App\Http\Controllers\MemberArea;
 
 use App\Http\Controllers\Controller;
 
-class MemberControllar extends ParentControllar
+class MemberController extends ParentController
 {
 
     /**
