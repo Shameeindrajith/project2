@@ -19,6 +19,6 @@ class UserFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return UserService::class;
+     return UserService::class;
     }
 }

@@ -64,7 +64,7 @@ class LoginController extends Controller
             } else {
                 return redirect()->back()->withInput()->with('user_data', 'userdisable');
             }
-    } else {
+     } else {
             return redirect()->back()->withInput()->with('error_data', 'userdata');
         }
     }

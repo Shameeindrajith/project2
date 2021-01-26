@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers\AdminArea;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+
 
 class AdminControllar extends ParentController
 {
@@ -15,6 +14,6 @@ class AdminControllar extends ParentController
      */
     public function index()
     {
-       return view('adminArea.pages.admin');
+     return view('adminArea.pages.admin');
     }
 }
