@@ -66,4 +66,42 @@ class AdminController extends ParentController
             $request->edit ? $request->edit : false
         );
     }
+
+    /**
+     * updateUser
+     *
+     * @param  mixed $id
+     * @return void
+     */
+    public function updateUser($id)
+    {
+      $update=UserFacade::getUserDataById($id);
+      return view('adminArea.pages.userUpdate')->with('update_user_data',$update);
+    }
+
+    /**
+     * updateUserData
+     *
+     * @param  mixed $request
+     * @return void
+     */
+    public function updateUserData(Request $request)
+    {
+      $data=UserFacade::getUserDataById($request->id);
+      UserFacade::updateUserData($data, $request->all());
+      return redirect(route('admin-show-user'));
+    }
+
+    /**
+     * deleteUser
+     *
+     * @param  mixed $id
+     * @return void
+     */
+    public function deleteUser($id)
+    {
+     $delete=UserFacade::getUserDataById($id);
+     $delete->delete();
+     return redirect()->back();
+    }
 }

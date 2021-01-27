@@ -17,6 +17,8 @@
                     <th>E-mail</th>
                     <th>User_role</th>
                     <th>Created_at</th>
+                    <th>Update</th>
+                    <th>Delete</th>
 
 
                     @foreach ($users as $user)
@@ -26,6 +28,8 @@
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->user_role }}</td>
                             <td>{{ $user->created_at }}</td>
+                            <td><a href="update-user/{{ $user->id }}" class="btn btn-warning">UPDATE</a>
+                            <td><a href="delete-user/{{ $user->id }}" class="btn btn-danger">DELETE</a></td>
                         </tr>
                     @endforeach
                 </table>
@@ -51,7 +55,6 @@
             position: absolute;
             top: 2px;
             right: 0;
-
         }
 
     </style>

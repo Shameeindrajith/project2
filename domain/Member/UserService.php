@@ -29,6 +29,17 @@ class UserService
     }
 
     /**
+     * getUserDataById
+     *
+     * @param  mixed $id
+     * @return void
+     */
+    public function getUserDataById($id)
+    {
+     return $this->user->find($id);
+    }
+
+    /**
      * store
      *
      * @param  mixed $data
@@ -77,5 +88,22 @@ class UserService
         } else {
             return ['status' => 0, "msg" => "Invalid Email"];
         }
+    }
+
+    /**
+     * updateUserData
+     *
+     * @param  mixed $user
+     * @param  mixed $data
+     * @return void
+     */
+    public function updateUserData(User $user, $data)
+    {
+     return $user->update($this->edit($user, $data));
+    }
+
+    protected function edit(User $user, $data)
+    {
+     return array_merge($user->toArray(), $data);
     }
 }

@@ -31,6 +31,9 @@ Route::prefix('/admin')->namespace('AdminArea')->group(function () {
     Route::get('/add-user', [AdminController::class, 'addUsers'])->name('admin-add-user');
     Route::post('/save-user', [AdminController::class, 'saveUsers'])->name('save-user');
     Route::get('/validate-email', [AdminController::class, 'validateEmail'])->name('validate-email');
+    Route::get('/update-user/{id}',[AdminController::class,'updateUser'])->name('update-user');
+    Route::post('/update-user-part', [AdminController::class, 'updateUserData'])->name('update-user-part');
+    Route::get('/delete-user/{id}', [AdminController::class, 'deleteUser'])->name('delete-user');
  });
 
 
