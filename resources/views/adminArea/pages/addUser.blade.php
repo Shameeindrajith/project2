@@ -31,6 +31,5 @@
             } else
                 $('#message').html('Password Not Matching').css('color', 'red');
         });
-
     </script>
 @endsection
