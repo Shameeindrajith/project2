@@ -19,7 +19,7 @@ class AdminController extends ParentController
     {
      return view('adminArea.pages.admin');
     }
-    
+
     /**
      * showUsers
      *
@@ -30,7 +30,7 @@ class AdminController extends ParentController
         $response['users']=UserFacade::getUserData();
         return view('adminArea.pages.showUser')->with($response);
     }
-    
+
     /**
      * addUsers
      *
@@ -40,7 +40,7 @@ class AdminController extends ParentController
     {
         return view('adminArea.pages.addUser');
     }
-    
+
     /**
      * saveUsers
      *
@@ -51,5 +51,19 @@ class AdminController extends ParentController
     {
        UserFacade::store($request->all());
        return redirect(route('admin-show-user'));
+    }
+
+    /**
+     * validateEmail
+     *
+     * @param  mixed $request
+     * @return void
+     */
+    public function validateEmail(Request $request)
+    {
+      return UserFacade::validateEmail(
+            $request->email ? $request->email : "",
+            $request->edit ? $request->edit : false
+        );
     }
 }
