@@ -15,11 +15,11 @@
 
 <body>
     <!-- Sidenav -->
-    @include('adminArea.includes.sideNav')
+    @include('adminArea.includes.sidebar')
     <!-- Main content -->
     <div class="main-content" id="panel">
         <!-- Topnav -->
-        @include('adminArea.includes.topNav')
+        @include('adminArea.includes.nav')
         <!-- Header -->
         <!-- Header -->
         @yield('header')
