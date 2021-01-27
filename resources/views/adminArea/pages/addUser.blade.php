@@ -3,7 +3,6 @@
     <br><br><br><br>
     <div class="text-center">
         <div class="row">
-
             <div class="col-12">
                 <h1>Add Product</h1>
                 <form method="post" action="{{ route('save-user') }}" enctype="multipart/form-data">
@@ -31,5 +30,6 @@
             } else
                 $('#message').html('Password Not Matching').css('color', 'red');
         });
+
     </script>
 @endsection
