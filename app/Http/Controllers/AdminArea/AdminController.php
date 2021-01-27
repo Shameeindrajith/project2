@@ -4,6 +4,7 @@ namespace App\Http\Controllers\AdminArea;
 
 use App\Http\Requests\checkOutAddUser;
 use domain\Facades\AdminFacade;
+use domain\Facades\UserFacade;
 use Illuminate\Http\Request;
 
 class AdminController extends ParentController
@@ -26,7 +27,7 @@ class AdminController extends ParentController
      */
     public function showUsers()
     {
-        $response['users']=AdminFacade::getUserData();
+        $response['users']=UserFacade::getUserData();
         return view('adminArea.pages.showUser')->with($response);
     }
     
@@ -48,7 +49,7 @@ class AdminController extends ParentController
      */
     public function saveUsers(checkOutAddUser $request)
     {
-       AdminFacade::store($request->all());
+       UserFacade::store($request->all());
        return redirect(route('admin-show-user'));
     }
 }

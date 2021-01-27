@@ -26,9 +26,9 @@
     <script>
         $('#password, #repassword').on('keyup', function() {
             if ($('#password').val() == $('#repassword').val()) {
-                $('#message').html('Password Matching').css('color', 'green');
+                $('#message').html('Password is Matching').css('color', 'green');
             } else
-                $('#message').html('Password Not Matching').css('color', 'red');
+                $('#message').html('Password is not Matching').css('color', 'red');
         });
 
     </script>
